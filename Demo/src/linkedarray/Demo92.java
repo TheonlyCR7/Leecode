@@ -1,18 +1,19 @@
+package linkedarray;
 
-class ListNode {
+class ListNode1 {
     int val;
-    ListNode next;
-    ListNode(int x) { val = x; }
+    ListNode1 next;
+    ListNode1(int x) { val = x; }
 }
 
-class Solution {
+class Solution1 {
 
     // Object level variables since we need the changes
     // to persist across recursive calls and Java is pass by value.
     private boolean stop;
-    private ListNode left;
+    private ListNode1 left;
 
-    public void recurseAndReverse(ListNode right, int m, int n) {
+    public void recurseAndReverse(ListNode1 right, int m, int n) {
 
         // base case. Don't proceed any further
         if (n == 1) {
@@ -50,7 +51,7 @@ class Solution {
         }
     }
 
-    public ListNode reverseBetween(ListNode head, int m, int n) {
+    public ListNode1 reverseBetween(ListNode1 head, int m, int n) {
         this.left = head;
         this.stop = false;
         this.recurseAndReverse(head, m, n);
