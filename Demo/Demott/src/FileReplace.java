@@ -15,6 +15,8 @@ public class FileReplace {
             System.out.println("文件内容替换完成并已写入到 " + outputPath);
         } catch (IOException e) {
             e.printStackTrace();
+        }finally {
+            System.out.println("文件内容替换完成");
         }
     }
 }
